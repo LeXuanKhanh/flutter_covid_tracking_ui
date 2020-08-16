@@ -1,6 +1,8 @@
 # fluttercovidtrackingui
 
-A new Flutter application.
+A Flutter Covid Tracking UI for Flutter Vietnam Hackathon.
+
+Demo video is video.webm
 
 ## Getting Started
 
