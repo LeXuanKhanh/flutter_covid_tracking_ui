@@ -8,12 +8,14 @@ class MostCaseInfo extends StatefulWidget {
   final int mostCaseTotal;
   final int mostCaseRecovered;
   final int mostCaseDeath;
+  final String mostCaseImage;
 
   MostCaseInfo({
     @required this.mostCaseCountry,
     @required this.mostCaseTotal,
     @required this.mostCaseRecovered,
-    @required this.mostCaseDeath
+    @required this.mostCaseDeath,
+    @required this.mostCaseImage,
   });
 
   @override
@@ -77,7 +79,7 @@ class _MostCaseInfoState extends State<MostCaseInfo> {
         margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
         child: Center(
           child: AnimatedContainer(
-              padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+              padding: EdgeInsets.all(16),
               duration: Duration(milliseconds: 500),
               decoration: BoxDecoration(
                   border: Border.all(width: 0.3),
@@ -101,9 +103,9 @@ class _MostCaseInfoState extends State<MostCaseInfo> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Image.asset('assets/americaFlag.png', height: 50),
+                        Image.asset(widget.mostCaseImage, height: 50),
                         SizedBox(width: 8),
-                        Text('United States', style: TextStyle(fontSize: 32)),
+                        Text(widget.mostCaseCountry, style: TextStyle(fontSize: 32)),
                       ],
                     ),
                   ),

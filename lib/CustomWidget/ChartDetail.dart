@@ -73,7 +73,7 @@ class _ChartDetailState extends State<ChartDetail> {
   @override
   Widget build(BuildContext context) {
     return VisibilityDetector(
-      key: Key("MostCaseInfo"),
+      key: Key("ChartDetail"),
       onVisibilityChanged: onVisibilityChanged,
       child: AnimatedOpacity(
         duration: Duration(milliseconds: duration),

@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class LastedCase extends StatefulWidget {
-  final String mostCaseCountry;
-  final int mostCaseTotal;
-  final int mostCaseRecovered;
-  final int mostCaseDeath;
+  final lastedCaseLocation;
+  final lastedCaseFound ;
+  final lastedCaseImage;
+  final lastedCaseImageCountry;
 
-  LastedCase(
-      {@required this.mostCaseCountry,
-      @required this.mostCaseTotal,
-      @required this.mostCaseRecovered,
-      @required this.mostCaseDeath});
+  LastedCase({
+    @required this.lastedCaseLocation,
+    @required this.lastedCaseFound,
+    @required this.lastedCaseImage,
+    @required this.lastedCaseImageCountry});
 
   @override
   _LastedCaseState createState() => _LastedCaseState();
@@ -75,7 +75,7 @@ class _LastedCaseState extends State<LastedCase> {
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
                         child: Image.asset(
-                          "assets/da_nang2.jpg",
+                          widget.lastedCaseImage,
                           fit: BoxFit.fitHeight,
                         ),
                       ),
@@ -98,7 +98,7 @@ class _LastedCaseState extends State<LastedCase> {
                                   ]
                               ),
                           child: Text(
-                            'Cases Found: 15',
+                            'Cases Found: ${widget.lastedCaseFound}',
                             style: TextStyle(
                               fontSize: 32,
                               color: Colors.white
@@ -110,8 +110,8 @@ class _LastedCaseState extends State<LastedCase> {
                         top: 0,
                         child: Container(
                           width: MediaQuery.of(context).size.width,
-                          height: 80,
-                          padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                          height: 90,
+                          padding: EdgeInsets.all(16),
                           decoration:
                               BoxDecoration(color: Colors.transparent, boxShadow: [
                                 BoxShadow(
@@ -135,7 +135,7 @@ class _LastedCaseState extends State<LastedCase> {
                                     ),
                                   ),
                                   Text(
-                                    'Da Nang, Viet Nam',
+                                    widget.lastedCaseLocation,
                                     style: TextStyle(
                                         fontSize: 24,
                                         color: Colors.white
@@ -145,7 +145,7 @@ class _LastedCaseState extends State<LastedCase> {
                               ),
                               Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 16, 0),
-                                child: Image.asset("assets/viet_nam.png", fit: BoxFit.fitWidth),
+                                child: Image.asset(widget.lastedCaseImageCountry, fit: BoxFit.fitWidth),
                               )
                             ],
                           ),

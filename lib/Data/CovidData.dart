@@ -4,7 +4,7 @@ class CovidData {
   final total = 30000000;
   final recovered = 1500000;
   final death = 150000;
-  final deathData = [
+  final recoveredData = [
     ChartDetailData(0, DateTime.now().add(Duration(days: -4)), 1000),
     ChartDetailData(1, DateTime.now().add(Duration(days: -3)), 10000),
     ChartDetailData(2, DateTime.now().add(Duration(days: -2)), 200000),
@@ -12,7 +12,7 @@ class CovidData {
     ChartDetailData(4, DateTime.now(), 1500000),
   ];
 
-  final recoveredData = [
+  final deathData = [
     ChartDetailData(0, DateTime.now().add(Duration(days: -4)), 5000),
     ChartDetailData(1, DateTime.now().add(Duration(days: -3)), 15000),
     ChartDetailData(2, DateTime.now().add(Duration(days: -2)), 50000),
@@ -24,6 +24,11 @@ class CovidData {
   final mostCaseTotal = 300000;
   final mostCaseRecovered = 150000;
   final mostCaseDeath = 1000;
+  final mostCaseImage = 'assets/americaFlag.png';
 
+  final lastedCaseLocation = 'Da Nang, Viet Nam';
+  final lastedCaseFound = 20;
+  final lastedCaseImage = 'assets/da_nang2.jpg';
+  final lastedCaseImageCountry = 'assets/viet_nam.png';
 
 }
